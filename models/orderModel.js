@@ -20,7 +20,7 @@ const OrderSchema = new Schema({
     deliveryDate: { type: Date, required: true },
     address: { type: String },
     item: { type: [ItemSchema], required: true },
-    statue: {
+    status: {
         type: String,
 
         enum: [

@@ -1,6 +1,6 @@
 import Category from "../models/categoryModel.js";
 
-const getAllCategory = async (req, res) => {
+const getAllCategories = async (req, res) => {
 
   
 
@@ -21,4 +21,4 @@ const getAllCategory = async (req, res) => {
     }
 
 }
-export default getAllCategory
+export default getAllCategories

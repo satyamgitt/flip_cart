@@ -1,10 +1,10 @@
 
 import express from "express";
 
-import getAllCategory from "../controllers/categoryController.js";
+import getAllCategories from "../controllers/categoryController.js";
 
 const route = express.Router();
 
-route.get("/" , getAllCategory);
+route.get("/" , getAllCategories);
 
 export default route;
