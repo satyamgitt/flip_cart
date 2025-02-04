@@ -6,6 +6,7 @@ import productRoute from "./routes/productRoute.js";
 import orderRoute from "./routes/orderRoute.js";
 import connectDB from "./config/connect.js";
 import { PORT } from "./config/config.js";
+import { buildAdminJS } from "./config/setup.js";
 
 dotenv.config()
 
@@ -26,11 +27,13 @@ const start = async () => {
 
         await connectDB(process.env.MONGO_URI)
 
+        await buildAdminJS(app)
+
         app.listen({ port: PORT, host: "0.0.0.0" }, (err) => {
             if (err) {
                 console.log("Error in Startting the server", err)
             } else {
-                console.log("Server is Runing on http://localhost:3000");
+                console.log(`Server is Runing on http://localhost:${PORT}/admin`);
             }
         })
     } catch (error) {

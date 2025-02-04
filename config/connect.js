@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 
-const connectDB =  ()=>{
-    return mongoose.connect(process.env.MONGO_URI);
+const connectDB =  (URL)=>{
+    return mongoose.connect(URL);
 }
 
 export default connectDB;
